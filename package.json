@@ -1,0 +1,18 @@
+{
+  "name": "ipadic-bot",
+  "version": "0.0.0",
+  "description": "twitter.com/ipadic",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeal/request.git"
+  },
+  "author": "hakatashi",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/mikeal/request/issues"
+  }
+}
