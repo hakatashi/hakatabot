@@ -3,6 +3,8 @@ ipadic-bot
 
 Working on [@ipadic](https://twitter.com/ipadic).
 
+Tweet random entry from [IPAdic](http://sourceforge.jp/projects/ipadic/).
+
 # Commands
 
     npm install
