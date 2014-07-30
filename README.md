@@ -3,6 +3,10 @@ ipadic-bot
 
 Working on [@ipadic](https://twitter.com/ipadic).
 
+# Commands
+
+    npm install
+
 # LICENSE
 
 ## IPAdic
