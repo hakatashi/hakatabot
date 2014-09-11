@@ -1,25 +1,6 @@
-ipadic-bot
-==========
+hakatabot
+=========
 
-Working on [@ipadic](https://twitter.com/ipadic).
+Everything is fun. It deal with hakatashi's daily nonsences.
 
-Tweet random entry from [IPAdic](http://sourceforge.jp/projects/ipadic/).
-
-# install
-
-    npm install
-
-# LICENSE
-
-## IPAdic
-
-Copyright 2000, 2001, 2002, 2003 Nara Institute of Science
-and Technology.  All Rights Reserved.
-
-See `COPYING.ipadic`.
-
-## Code
-
-Produced by [hakatashi](https://github.com/hakatashi).
-
-[MIT License](http://opensource.org/licenses/MIT). See `LICENSE`.
+Read any `README.md` of each subdirectories!
