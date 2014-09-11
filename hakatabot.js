@@ -18,7 +18,12 @@ var twitter = function (method, account, resource, params, callback) {
 
 	request({
 		url: APIBase + resource + '.json' + '?' + paramString,
-		oauth: config.oauth,
+		oauth: {
+			consumer_key: config.oauth.consumer_key,
+			consumer_secret: config.oauth.consumer_secret,
+			token: config.oauth[account].oauth_token,
+			token_secret: config.oauth[account].oauth_token_secret,
+		},
 		json: true,
 		method: method,
 	}, callback);
@@ -29,12 +34,14 @@ twitter.get = function (account, resource, params, callback) {
 };
 
 twitter.post = function (account, resource, params, callback) {
-	twitter('POST', resource, params, callback);
+	twitter('POST', account, resource, params, callback);
 };
 
-var cronJob = new CronJob('00 */10 * * * *', function () {
+var jobs = {};
+
+jobs.ipadic = new CronJob('00 */10 * * * *', function () {
 	db.get('SELECT * FROM ipadic ORDER BY RANDOM()', function (error, entry) {
-		twitter.post('statuses/update', {
+		twitter.post('ipadic', 'statuses/update', {
 			status: entry.entry
 		}, function (error, responce, data) {
 			if (error) {
