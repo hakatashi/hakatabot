@@ -4,7 +4,8 @@
   "description": "twitter.com/ipadic",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/forever/bin/forever start app.js",
   },
   "repository": {
     "type": "git",
