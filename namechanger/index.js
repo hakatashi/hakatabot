@@ -7,9 +7,9 @@ var twitter = require('../twitter');
 var db = new sqlite3.Database(__dirname + '/aozora.sqlite3');
 
 module.exports = new CronJob('00 */10 * * * *', function () {
-	db.get('SELECT * FROM ipadic ORDER BY RANDOM()', function (error, entry) {
-		twitter.post('ipadic', 'statuses/update', {
-			status: entry.entry
+	db.get('SELECT * FROM aozora ORDER BY RANDOM()', function (error, entry) {
+		twitter.post('hakatashi_B', 'account/update_profile', {
+			name: entry.entry
 		}, function (error, responce, data) {
 			if (error) {
 				console.error(error);

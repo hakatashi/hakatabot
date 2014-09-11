@@ -7,7 +7,7 @@ var fs = require('fs');
 
 var db = new sqlite3.Database(__dirname + '/aozora.sqlite3');
 
-var NUM = 8910;
+var NUM = 10000;
 
 async.series([
 	function (done) {
