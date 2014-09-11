@@ -1,20 +1,20 @@
 {
   "name": "hakatabot",
   "version": "0.0.0",
-  "description": "twitter.com/ipadic",
-  "main": "app.js",
+  "description": "Deal with hakatashi's daily nonsences.",
+  "main": "hakatabot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/forever/bin/forever start app.js"
+    "start": "node ./node_modules/forever/bin/forever start hakatabot.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikeal/request.git"
+    "url": "https://github.com/hakatashi/hakatabot.git"
   },
   "author": "hakatashi",
-  "license": "Unlicense",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikeal/request/issues"
+    "url": "https://github.com/hakatashi/hakatabot/issues"
   },
   "dependencies": {
     "time": "~0.11.0",
