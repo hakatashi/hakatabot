@@ -3,12 +3,12 @@ var request = require('request');
 var CronJob = require('cron').CronJob;
 var sqlite3 = require('sqlite3').verbose();
 var time = require('time');
-var config = require('./config');
+var config = require('cson').parseFileSync('config.cson');
 
 var APIBase = 'https://api.twitter.com/1.1/';
 var db = new sqlite3.Database('ipadic.sqlite3');
 
-var twitter = function (method, resource, params, callback) {
+var twitter = function (method, account, resource, params, callback) {
 	var paramString = querystring.stringify(params)
 		.replace(/\!/g, "%21")
 		.replace(/\'/g, "%27")
@@ -24,11 +24,11 @@ var twitter = function (method, resource, params, callback) {
 	}, callback);
 };
 
-twitter.get = function (resource, params, callback) {
-	twitter('GET', resource, params, callback);
+twitter.get = function (account, resource, params, callback) {
+	twitter('GET', account, resource, params, callback);
 };
 
-twitter.post = function (resource, params, callback) {
+twitter.post = function (account, resource, params, callback) {
 	twitter('POST', resource, params, callback);
 };
 
