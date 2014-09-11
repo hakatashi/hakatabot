@@ -26,6 +26,7 @@ node_modules
 
 # Secret Settings
 config.js
+config.cson
 
 # =========================
 # Operating System Files

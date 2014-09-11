@@ -5,7 +5,7 @@
   "main": "hakatabot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/forever/bin/forever start hakatabot.js"
+    "start": "node ./node_modules/.bin/forever start hakatabot.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "cron": "~1.0.4",
     "request": "~2.39.0",
     "sqlite3": "~2.2.4",
-    "forever": "~0.11.1"
+    "forever": "~0.11.1",
+    "open": "0.0.5"
   }
 }
