@@ -6,7 +6,7 @@ var twitter = require('../twitter');
 
 var alertTimes = 0;
 
-var frequency = 10;
+var frequency = 5;
 
 function repeat(string, times) {
 	var ret = '';
