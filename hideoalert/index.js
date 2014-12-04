@@ -6,6 +6,8 @@ var twitter = require('../twitter');
 
 var alertTimes = 0;
 
+var frequency = 10;
+
 function repeat(string, times) {
 	var ret = '';
 	for (var i = 0; i < times; i++) ret += string;
@@ -23,14 +25,14 @@ module.exports = new CronJob('00 * * * * *', function () {
 		twitter.get('hakatashi', 'statuses/user_timeline', {
 			screen_name: 'hideo54',
 			since_id: lastAlert,
-			count: 3,
+			count: frequency,
 			include_rts: false
 		}, function (error, responce, data) {
 			if (error) return console.error(error);
-			if (data.length < 3) return;
+			if (data.length < frequency) return;
 
 			var lastTweet = data[0];
-			var borderTweet = data[2];
+			var borderTweet = data[frequency - 1];
 			var borderTime = new Date(borderTweet.created_at);
 			var lastTime = new Date(lastTweet.created_at);
 
