@@ -28,6 +28,9 @@ node_modules
 config.js
 config.cson
 
+# DB
+hideoalert/lastalert.txt
+
 # =========================
 # Operating System Files
 # =========================
