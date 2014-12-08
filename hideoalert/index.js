@@ -14,7 +14,7 @@ function repeat(string, times) {
 	return ret;
 }
 
-module.exports = new CronJob('30 * * * * *', function () {
+module.exports = new CronJob('00 * * * * *', function () {
 	var now = new Date();
 
 	async.waterfall([
