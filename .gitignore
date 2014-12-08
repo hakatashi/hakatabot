@@ -30,6 +30,7 @@ config.cson
 
 # DB
 hideoalert/lastalert.txt
+hideoalert/progress.json
 
 # =========================
 # Operating System Files
