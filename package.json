@@ -2,7 +2,7 @@
   "name": "hakatabot",
   "version": "0.0.0",
   "description": "Deal with hakatashi's daily nonsences.",
-  "main": "hakatabot.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./node_modules/.bin/forever start hakatabot.js"
