@@ -9,7 +9,7 @@ var twitter = require('../twitter');
 
 var latestShindanURL = 'http://shindanmaker.com/c/list';
 
-module.exports = new CronJob('00 * * * * *', function () {
+module.exports = new CronJob('00 */30 * * * *', function () {
 	async.waterfall([
 		// Get latest shindan page
 		request.bind(this, latestShindanURL),
