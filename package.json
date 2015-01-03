@@ -14,13 +14,14 @@
   },
   "dependencies": {
     "async": "~0.9.0",
-    "time": "~0.11.0",
+    "cheerio": "^0.18.0",
     "cron": "~1.0.4",
-    "request": "~2.39.0",
-    "sqlite3": "~2.2.4",
+    "cson": "~1.6.1",
     "forever": "~0.11.1",
     "open": "0.0.5",
-    "cson": "~1.6.1"
+    "request": "~2.39.0",
+    "sqlite3": "~2.2.4",
+    "time": "~0.11.0"
   },
   "devDependencies": {
     "glob": "~4.0.5",

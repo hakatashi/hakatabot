@@ -11,12 +11,8 @@ module.exports = new CronJob('00 */10 * * * *', function () {
 		twitter.post('hakatashi_B', 'account/update_profile', {
 			name: entry.entry
 		}, function (error, responce, data) {
-			if (error) {
-				console.error(error);
-				return;
-			}
-
-			console.log(data);
+			if (error) console.error('namechanger ERROR: ' + error.message);
+			else console.log(JSON.stringify(data));
 		});
 	});
 }, null, true, 'Asia/Tokyo');

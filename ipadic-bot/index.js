@@ -11,12 +11,8 @@ module.exports = new CronJob('00 */10 * * * *', function () {
 		twitter.post('ipadic', 'statuses/update', {
 			status: entry.entry
 		}, function (error, responce, data) {
-			if (error) {
-				console.error(error);
-				return;
-			}
-
-			console.log(data);
+			if (error) console.error('ipadic-bot ERROR: ' + error.message);
+			else console.log(JSON.stringify(data));
 		});
 	});
 }, null, true, 'Asia/Tokyo');
