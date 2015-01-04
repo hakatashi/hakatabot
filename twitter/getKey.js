@@ -6,7 +6,7 @@ var readline = require('readline');
 var qs = require('querystring');
 var fs = require('fs');
 
-var config = require('./config');
+var config = require('cson').parseFileSync('config.cson');
 
 var oauth =	{
 	callback: 'oob',
