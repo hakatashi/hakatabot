@@ -1,6 +1,6 @@
 var querystring = require('querystring');
 var request = require('request');
-var config = require('cson').parseFileSync('config.cson');
+var config = require('cson').parse(require('fs').readFileSync('config.cson'));
 
 var APIBase = 'https://api.twitter.com/1.1/';
 var streamBase = 'https://stream.twitter.com/1.1/';
