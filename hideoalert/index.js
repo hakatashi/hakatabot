@@ -6,7 +6,7 @@ var fs = require('fs');
 var twitter = require('../twitter');
 
 var frequency = 5;
-var targets = ['akouryy1'];
+var targets = ['hideo54'];
 
 function repeat(string, times) {
 	var ret = '';
