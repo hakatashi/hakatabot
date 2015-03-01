@@ -37,7 +37,7 @@ module.exports = new CronJob('00 * * * * *', function () {
 					if (data.length < frequency) return done();
 
 					var lastTweet = data[0];
-					var borderTweet = data[frequency - 1];
+					var borderTweet = data[data.length - 1];
 					var borderTime = new Date(borderTweet.created_at);
 					var lastTime = new Date(lastTweet.created_at);
 
