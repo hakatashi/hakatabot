@@ -31,20 +31,20 @@ module.exports = new CronJob('00 * * * * *', function () {
 					screen_name: target,
 					since_id: progress.lastAlert,
 					count: frequency,
-					include_rts: false
+					include_rts: true
 				}, function (error, responce, data) {
 					if (error) return done(error);
 					if (data.length < frequency) return done();
 
 					var lastTweet = data[0];
 					var borderTweet = data[data.length - 1];
-					var borderTime = new Date(borderTweet.created_at);
 					var lastTime = new Date(lastTweet.created_at);
+					var borderTime = new Date(borderTweet.created_at);
 
-					if (lastTime - borderTime < 10 * 60 * 1000) {
+					if (lastTime - borderTime < 15 * 60 * 1000) {
 						twitter.post('hakatashi', 'statuses/update', {
 							status: '@' + target + ' 勉強しろ' + repeat('!', progress.alertTimes),
-							in_reply_to_status_id: lastTweet.id_str
+							in_reply_to_status_id: lastTweet.retweeted_status ? undefined : lastTweet.id_str
 						});
 
 						progress.lastAlert = lastTweet.id_str;
