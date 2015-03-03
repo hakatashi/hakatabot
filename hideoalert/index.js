@@ -34,6 +34,7 @@ module.exports = new CronJob('00 * * * * *', function () {
 					include_rts: true
 				}, function (error, responce, data) {
 					if (error) return done(error);
+                    if (responce.statusCode !== 200) return done(JSON.stringify(data));
 					if (data.length < frequency) return done();
 
 					var lastTweet = data[0];
@@ -60,6 +61,6 @@ module.exports = new CronJob('00 * * * * *', function () {
 			});
 		}
 	], function (error) {
-		if (error) console.error(error);
+		if (error) console.error('hideoalert ERROR: ' + error);
 	});
 }, null, true, 'Asia/Tokyo');
