@@ -13,17 +13,17 @@
     "url": "https://github.com/hakatashi/hakatabot/issues"
   },
   "dependencies": {
-    "async": "~0.9.0",
-    "cheerio": "^0.18.0",
-    "cron": "~1.0.4",
-    "cson": "^2.0.0",
+    "async": "~2.1.4",
+    "cheerio": "^0.22.0",
+    "cron": "~1.2.1",
+    "cson": "^4.0.0",
     "open": "0.0.5",
     "request": "^2.51.0",
     "sqlite3": "^3.0.5",
     "time": "~0.11.0"
   },
   "devDependencies": {
-    "glob": "~4.0.5",
+    "glob": "~7.1.1",
     "iconv-lite": "~0.4.4"
   }
 }
