@@ -17,7 +17,7 @@
     "cheerio": "^0.18.0",
     "cron": "~1.0.4",
     "cson": "^2.0.0",
-    "open": "0.0.5",
+    "open": "6.0.0",
     "request": "^2.51.0",
     "sqlite3": "^4.1.0",
     "time": "github:riyadshauk/node-time"
