@@ -28,6 +28,7 @@ jobs:
           MERGE_FORKS: false
           MERGE_DELETE_BRANCH: true
           MERGE_FILTER_AUTHOR: snyk-bot
+          MERGE_LABELS: ''
   automerge-dependabot:
     runs-on: ubuntu-latest
     steps:
