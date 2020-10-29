@@ -14,16 +14,22 @@
   },
   "dependencies": {
     "async": "~0.9.0",
-    "cheerio": "^0.18.0",
+    "cheerio": "^0.20.0",
     "cron": "~1.0.4",
     "cson": "^2.0.0",
     "open": "6.0.0",
-    "request": "^2.51.0",
+    "request": "^2.88.0",
     "sqlite3": "^4.1.0",
-    "time": "github:riyadshauk/node-time"
+    "time": "github:riyadshauk/node-time",
+    "snyk": "^1.421.1"
   },
   "devDependencies": {
     "glob": "~4.0.5",
     "iconv-lite": "~0.4.4"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
