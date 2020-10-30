@@ -15,7 +15,7 @@
   "dependencies": {
     "async": "~0.9.0",
     "cheerio": "^0.20.0",
-    "cron": "~1.0.4",
+    "cron": "~1.8.2",
     "cson": "^2.0.0",
     "open": "6.0.0",
     "request": "^2.88.0",
