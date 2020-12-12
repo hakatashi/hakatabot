@@ -6,8 +6,8 @@ var url = require('url');
 
 var twitter = require('../twitter');
 
-var randomGlyphURL = 'http://glyphwiki.org/wiki/Special:Random';
-var glyphImageURL = 'http://glyphwiki.org/glyph/';
+var randomGlyphURL = 'https://glyphwiki.org/wiki/Special:Random';
+var glyphImageURL = 'https://glyphwiki.org/glyph/';
 
 module.exports = new CronJob('00 */30 * * * *', function () {
 	async.waterfall([
@@ -15,7 +15,7 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 		request.bind(this, {url: randomGlyphURL, followRedirect: false}),
 		// Extract random glyph destination
 		function (response, body, done) {
-			if (response.statusCode !== 302 && response.statusCode !== 301) return done(new Error('Status not OK'));
+			if (response.statusCode !== 302) return done(new Error('Status not OK'));
 
 			var glyphUrl = url.resolve(randomGlyphURL, response.headers.location);
 			if (!glyphUrl) return done(new Error('Glyph URL not found'));
