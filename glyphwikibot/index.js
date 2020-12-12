@@ -16,7 +16,7 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 		request.bind(this, {url: randomGlyphURL, followRedirect: false}),
 		// Extract random glyph destination
 		function (responce, body, done) {
-			if (responce.statusCode !== 302) return done(new Error('Status not OK'));
+			if (responce.statusCode !== 302 && responce.statusCode !== 301) return done(new Error('Status not OK'));
 
 			var glyphUrl = url.resolve(randomGlyphURL, responce.headers.location);
 			if (!glyphUrl) return done(new Error('Glyph URL not found'));
