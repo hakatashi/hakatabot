@@ -1,6 +1,5 @@
 var CronJob = require('cron').CronJob;
 var async = require('async');
-var time = require('time');
 var request = require('request');
 var cheerio = require('cheerio');
 var url = require('url');
@@ -15,10 +14,10 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 		// Get random glyph
 		request.bind(this, {url: randomGlyphURL, followRedirect: false}),
 		// Extract random glyph destination
-		function (responce, body, done) {
-			if (responce.statusCode !== 302 && responce.statusCode !== 301) return done(new Error('Status not OK'));
+		function (response, body, done) {
+			if (response.statusCode !== 302 && response.statusCode !== 301) return done(new Error('Status not OK'));
 
-			var glyphUrl = url.resolve(randomGlyphURL, responce.headers.location);
+			var glyphUrl = url.resolve(randomGlyphURL, response.headers.location);
 			if (!glyphUrl) return done(new Error('Glyph URL not found'));
 
 			return done(null, glyphUrl);
@@ -34,8 +33,8 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 					// Get glyph page... yes by default of request encoding, utf-8
 					request.bind(this, glyphUrl),
 					// Extract glyph information
-					function (responce, body, done) {
-						if (responce.statusCode !== 200) return done(new Error('Status not OK'));
+					function (response, body, done) {
+						if (response.statusCode !== 200) return done(new Error('Status not OK'));
 
 						var info = {url: glyphUrl};
 
@@ -61,7 +60,7 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 						}, done);
 					},
 					// Extract media id
-					function (responce, data, done) {
+					function (response, data, done) {
 						if (!data.media_id_string) {
 							console.log(data);
 							return done(new Error('Media upload error'));
@@ -77,7 +76,7 @@ module.exports = new CronJob('00 */30 * * * *', function () {
 				media_ids: info.media
 			}, done);
 		}
-	], function (error, responce, data) {
+	], function (error, response, data) {
 		if (error) console.error('glyphwikibot ERROR: ' + error.message);
 		else console.log(JSON.stringify(data));
 	});
