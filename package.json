@@ -19,7 +19,7 @@
     "cson": "^2.0.0",
     "open": "7.4.1",
     "request": "^2.88.0",
-    "sqlite3": "^5.0.1",
+    "sqlite3": "^5.0.2",
     "time": "github:riyadshauk/node-time",
     "snyk": "^1.454.0"
   },
