@@ -21,7 +21,7 @@
     "request": "^2.88.0",
     "sqlite3": "^5.0.2",
     "time": "github:riyadshauk/node-time",
-    "snyk": "^1.812.0"
+    "snyk": "^1.813.0"
   },
   "devDependencies": {
     "glob": "~4.0.5",
