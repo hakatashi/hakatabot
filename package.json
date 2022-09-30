@@ -24,7 +24,7 @@
     "snyk": "^1.996.0"
   },
   "devDependencies": {
-    "glob": "~4.0.5",
+    "glob": "~8.0.3",
     "iconv-lite": "~0.4.4"
   },
   "scripts": {
