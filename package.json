@@ -19,9 +19,9 @@
     "cson": "^2.0.0",
     "open": "7.4.2",
     "request": "^2.88.0",
-    "sqlite3": "^5.1.5",
+    "sqlite3": "^5.1.6",
     "time": "github:riyadshauk/node-time",
-    "snyk": "^1.1228.0"
+    "snyk": "^1.1064.0"
   },
   "devDependencies": {
     "glob": "~8.0.3",
