@@ -13,15 +13,15 @@
     "url": "https://github.com/hakatashi/hakatabot/issues"
   },
   "dependencies": {
-    "async": "~3.2.4",
-    "cheerio": "^1.0.0-rc.12",
+    "async": "~3.2.5",
+    "cheerio": "^1.0.0",
     "cron": "~1.8.2",
-    "cson": "^7.20.0",
+    "cson": "^8.4.0",
     "open": "7.4.2",
     "request": "^2.88.0",
     "sqlite3": "^5.1.7",
     "time": "github:riyadshauk/node-time",
-    "snyk": "^1.1064.0"
+    "snyk": "^1.1292.4"
   },
   "devDependencies": {
     "glob": "~8.0.3",
