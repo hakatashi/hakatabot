@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "async": "~3.2.6",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.1.0",
     "cron": "~1.8.2",
     "cson": "^8.4.0",
     "open": "7.4.2",
